@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lang-xls-to-json-report-service": "ts-node lang-utils/langutils.ts xlstojsonreportservice",
+    "lang-xls-to-json-mail-service": "ts-node lang-utils/langutils.ts xlstojsonmailservice"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "excel4node": "^1.7.2"
+    "@types/node": "^14.14.22",
+    "excel4node": "^1.7.2",
+    "exceljs": "^4.2.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
   }
 }
