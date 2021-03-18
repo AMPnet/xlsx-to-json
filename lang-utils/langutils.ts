@@ -9,7 +9,7 @@ const xlsToJsonReportService = async (filePath: string) => {
     const Excel = require('exceljs');
     const workbook = new Excel.Workbook();
     await workbook.xlsx.readFile(filePath);
-    const worksheet = workbook.getWorksheet(2);
+    const worksheet = workbook.getWorksheet(3);
     const getCell = (i: number, j: number): string => worksheet.getRow(i).getCell(j).text;
 
     const langs: string[] = [];
@@ -49,7 +49,7 @@ const xlsToJsonMailService = async (filePath: string) => {
     const Excel = require('exceljs');
     const workbook = new Excel.Workbook();
     await workbook.xlsx.readFile(filePath);
-    const worksheet = workbook.getWorksheet(1);
+    const worksheet = workbook.getWorksheet(2);
 
     const getCell = (i: number, j: number): string => worksheet.getRow(i).getCell(j).text;
 
